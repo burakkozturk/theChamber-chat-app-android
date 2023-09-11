@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
+    <item android:id="@android:id/background">
         <shape>
             <gradient
-                android:startColor="#E5E7EB"
-                android:centerColor="#999DAE"
-
-                android:centerX="0"
-
-                android:endColor="#E5E7EB"
+                android:type="linear"
+                android:startColor="#999dae"
+                android:centerColor="#e5e7eb"
+                android:endColor="#e5e7eb"
                 android:angle="90" />
         </shape>
     </item>
 </layer-list>
-
-
-
-<!--<View-->
-<!--android:id="@+id/backgroundGradient"-->
-<!--android:layout_width="0dp"-->
-<!--android:layout_height="0dp"-->
-<!--app:layout_constraintBottom_toBottomOf="parent"-->
-<!--app:layout_constraintEnd_toEndOf="parent"-->
-<!--app:layout_constraintStart_toStartOf="parent"-->
-<!--app:layout_constraintTop_toTopOf="parent"-->
-<!--android:background="@drawable/gradient_background" />-->

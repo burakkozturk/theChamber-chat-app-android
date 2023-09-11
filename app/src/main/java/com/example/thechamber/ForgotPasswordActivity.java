@@ -2,14 +2,16 @@ package com.example.thechamber;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Toast;
 
+import com.example.thechamber.R;
 import com.example.thechamber.utilities.Countries;
 import com.example.thechamber.utilities.SpinnerHelper;
 
@@ -22,7 +24,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class RegisterActivity extends AppCompatActivity {
+public class ForgotPasswordActivity extends AppCompatActivity {
+
 
     private Spinner spinner;
     private List<Countries> countryList;
@@ -30,9 +33,12 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_forgot_password);
+
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
 
         spinner = findViewById(R.id.spinner);
 
@@ -42,7 +48,9 @@ public class RegisterActivity extends AppCompatActivity {
 
         // Spinner'ı doldur
         SpinnerHelper.setupSpinner(this, spinner, countryList);
+
     }
+
 
     private void loadCountriesFromJson() {
         try {
@@ -79,5 +87,6 @@ public class RegisterActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 }

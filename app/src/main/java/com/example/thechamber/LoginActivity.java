@@ -2,6 +2,7 @@ package com.example.thechamber;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -11,6 +12,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.thechamber.utilities.Countries;
+import com.example.thechamber.utilities.SpinnerHelper;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,9 +32,12 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
+
+
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
         spinner = findViewById(R.id.spinner);
 
@@ -41,23 +46,8 @@ public class LoginActivity extends AppCompatActivity {
         loadCountriesFromJson();
 
         // Spinner'ı doldur
-        ArrayAdapter<Countries> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, countryList);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+        SpinnerHelper.setupSpinner(this, spinner, countryList);
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                Countries selectedCountry = countryList.get(position);
-                String selectedCode = selectedCountry.getCode();
-                String selectedFlag = selectedCountry.getFlag();
-                Toast.makeText(getApplicationContext(), "Seçilen ülke kodu: " + selectedCode + "\nBayrak: " + selectedFlag, Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-            }
-        });
     }
 
     private void loadCountriesFromJson() {
@@ -95,5 +85,20 @@ public class LoginActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+    }
+
+
+    public void goToRegisterPage(View view) {
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
+    }
+
+
+
+
+    public void gotoForgotPasswordPage(View view) {
+        Intent intent = new Intent(this, ForgotPasswordActivity.class);
+        startActivity(intent);
     }
 }
