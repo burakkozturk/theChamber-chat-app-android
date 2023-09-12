@@ -180,23 +180,11 @@
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintHorizontal_bias="0.311"
         app:layout_constraintStart_toStartOf="@+id/backgroundImageView"
         app:layout_constraintTop_toTopOf="@+id/backgroundImageView"
-        app:layout_constraintVertical_bias="0.851"
-        app:srcCompat="@drawable/facebook" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Facebook"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.893" />
+        app:layout_constraintVertical_bias="0.85"
+        app:srcCompat="@drawable/facebook_icon" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -204,24 +192,11 @@
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintHorizontal_bias="0.659"
         app:layout_constraintStart_toStartOf="@+id/backgroundImageView"
         app:layout_constraintTop_toTopOf="@+id/backgroundImageView"
-        app:layout_constraintVertical_bias="0.851"
-        app:srcCompat="@drawable/twitter" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="268dp"
-        android:text="Twitter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
-        app:layout_constraintStart_toStartOf="@+id/backgroundImageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.893" />
+        app:layout_constraintVertical_bias="0.85"
+        app:srcCompat="@drawable/twitter_icon" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -229,26 +204,14 @@
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="@+id/backgroundImageView"
         app:layout_constraintTop_toTopOf="@+id/backgroundImageView"
-        app:layout_constraintVertical_bias="0.851"
-        app:srcCompat="@drawable/google" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Google"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="@+id/backgroundImageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.893" />
+        app:layout_constraintVertical_bias="0.85"
+        app:srcCompat="@drawable/google_icon" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewEyeIcon"
         android:layout_width="46dp"
         android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -257,10 +220,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.471"
-        app:srcCompat="@drawable/eyeicon" />
+        app:srcCompat="@drawable/eye_icon" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageViewLanguageIcon"
         android:layout_width="47dp"
         android:layout_height="43dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -269,5 +232,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976"
-        app:srcCompat="@drawable/wordicon" />
+        app:srcCompat="@drawable/language_icon" />
 </androidx.constraintlayout.widget.ConstraintLayout>

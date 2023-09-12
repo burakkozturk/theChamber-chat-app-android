@@ -33,4 +33,15 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ForgotPasswordActivity.class);
         startActivity(intent);
     }
+
+    public void openCreateAccountActivity(View view) {
+        Intent intent = new Intent(this, CreateAccountActivity.class);
+        startActivity(intent);
+    }
+
+    public void openChatActivity(View view){
+        Intent intent = new Intent (this, ChatActivity.class);
+        startActivity(intent);
+    }
+
 }
